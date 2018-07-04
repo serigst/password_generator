@@ -2,8 +2,6 @@ import random
 import string
 import os
 
-passlist = []
-
 # pwd = ""
 
 count1 = 0
@@ -19,7 +17,7 @@ filName = str(input("What do you want to name the file?"))
 def pwd(pword, count, count1):
 
     while count != length:
-        # upper = [random.choice(string.ascii_uppercase)]
+        upper = [random.choice(string.ascii_uppercase)]
         lower = [random.choice(string.ascii_lowercase)]
         num = [random.choice(string.digits)]
         everything = lower + num
@@ -33,15 +31,10 @@ def pwd(pword, count, count1):
             the_file.write(pword + '\n')
         count1 += 1
 
-
 for i in range(0, amount):
     pwd("", 0, 0)
 
-
 input('Finished! Press return to exit!')
 
-# while count1 <= leil:
-#     pwd("", 0, 0)
-
-if count1 == leil:
+if count1 == amount:
     os.system('pause')
